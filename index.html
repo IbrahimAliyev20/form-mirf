@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Ana Səhifə-MİRF</title>
+  </head>
+  <body>
+    <header class="bg-white border-b-2 shadow-lg fixed w-full z-50">
+      <div class="container m-auto flex items-center justify-between py-4 px-2">
+        <!-- LOGO -->
+        <div class="logo w-44">
+          <a href="/">
+            <img src="./assets/image/logo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="navmenu hidden xl:flex text-cyan-950">
+          <ul class="flex space-x-7 font-bold">
+            <li><a href="/">Ana Səhifə</a></li>
+            <li><a href="#about">Haqqında</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#">Bloqlar</a></li>
+            <li><a href="#">Layihələr</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+
+            <!-- Qalereya menyusu -->
+            <li class="relative group">
+              <a href="#" class="flex items-center">
+                Qalereya <i class="fa-solid fa-angle-down ml-1"></i>
+              </a>
+
+              <!-- Qalereya alt menyusu -->
+              <ul
+                class="absolute hidden group-hover:block bg-white shadow-md py-2 w-48 z-10"
+              >
+                <!-- Köhnə Formlar -->
+                <li class="relative hover-trigger">
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                  >
+                    Köhnə Formlar <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul
+                    class="absolute top-0 left-full hidden bg-white shadow-md py-2 w-40 z-20 hover-target"
+                  >
+                    <li>
+                      <a
+                        href="https://2022.mirf.az/"
+                        target="_blank"
+                        class="block px-4 py-2 hover:bg-gray-200"
+                        >MİRF 2022</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://2023.mirf.az/"
+                        target="_blank"
+                        class="block px-4 py-2 hover:bg-gray-200"
+                        >MİRF 2023</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://2024.mirf.az/"
+                        target="_blank"
+                        class="block px-4 py-2 hover:bg-gray-200"
+                        >MİRF 2024</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- Foto -->
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                  >
+                    <span>Foto</span> <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+
+                <!-- Video -->
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                  >
+                    <span>Video</span> <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TICKET LANGUAGE BASKET -->
+        <div
+          class="header-icn hidden xl:flex items-center justify-center space-x-4"
+        >
+          <div class="drop-language relative group text-cyan-950 font-bold">
+            <div>
+              Az <i class="fa-solid fa-angle-down ml-1"></i>
+              <ul
+                class="absolute hidden group-hover:block bg-white shadow-md py-2 w-24"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><img
+                      src="assets/image/Azerbaijan-Flag-icon.png"
+                      alt="flag"
+                      class="w-6 me-2"
+                    />
+                    AZ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><img
+                      src="assets/image/United-Kingdom-Flag-icon.png"
+                      alt="flag"
+                      class="w-6 me-2"
+                    />EN</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="basket=btn">
+            <a href="/basketpage.html">
+              <i
+                class="fa-solid fa-cart-shopping relative text-lg text-cyan-950 hover:text-blue-600 cursor-pointer"
+              >
+                <p
+                  class="basketCount count absolute bg-red-400 text-white p-1 bottom-3 left-3 text-9px rounded-full"
+                >
+                  0
+                </p>
+              </i>
+            </a>
+          </div>
+
+          <div class="ticket-btn bg-color-spc rounded-lg hover:bg-blue-600">
+            <a href="#ticket-buy">
+              <span class="text-slate-50 px-2 font-semibold cursor-pointer"
+                >Bilet Al<i class="fa-solid fa-ticket ml-1 py-3"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BURGERMENU -->
+        <div
+          class="burger-menu w-8 cursor-pointer flex-col justify-between h-5 m-2"
+          id="burgerMenu"
+        >
+          <div class="burger-bar"></div>
+          <div class="burger-bar"></div>
+          <div class="burger-bar"></div>
+        </div>
+
+        <!-- MOBILE-NAV -->
+        <div
+          class="mobile-nav shadow-lg fixed top-0 -right-96 w-1/2 max-w-80 h-screen bg-white flex flex-col p-5 pt-14 z-50"
+          id="mobileNav"
+        >
+          <button
+            class="close-btn absolute top-3 left-3 border-none text-black cursor-pointer"
+            id="closeBtnNav"
+          >
+            &times;
+          </button>
+
+          <ul class="flex flex-col space-x-0 font-bold">
+            <li><a href="/">Ana Səhifə</a></li>
+            <li><a href="#about">Haqqında</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#">Bloqlar</a></li>
+            <li><a href="#">Layihələr</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+            <li class="relative group">
+              <a href="#" class="flex items-center">
+                Qaleriya <i class="fa-solid fa-angle-down"></i>
+              </a>
+              <ul
+                class="absolute hidden group-hover:block bg-white shadow-md py-2 w-48"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    >Köhnə Formlar <i class="fa-solid fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><span>Foto</span> <i class="fa-solid fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><span>Video</span> <i class="fa-solid fa-chevron-right"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="drop-language relative group text-cyan-950 font-bold">
+            <div class="flex items-center cursor-pointer">
+              <span>Az</span>
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </div>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-md py-2 w-24"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                >
+                  <img
+                    src="assets/image/Azerbaijan-Flag-icon.png"
+                    alt="flag"
+                    class="w-6"
+                  />
+                  AZ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                >
+                  <img
+                    src="assets/image/United-Kingdom-Flag-icon.png"
+                    alt="flag"
+                    class="w-6"
+                  />
+                  EN
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="basket=btn">
+            <i
+              class="fa-solid fa-cart-shopping relative text-lg text-cyan-950 hover:text-blue-600 cursor-pointer"
+            >
+              <p
+                class="basketCount count absolute bg-red-400 text-white p-1 bottom-3 left-3 text-9px rounded-full"
+              >
+                0
+              </p>
+            </i>
+          </div>
+
+          <div
+            class="ticket-btn bg-color-spc rounded-lg hover:bg-blue-600 text-center"
+          >
+            <a href="#">
+              <span class="text-slate-50 px-2 font-semibold cursor-pointer"
+                >Bilet Al<i class="fa-solid fa-ticket ml-1 py-3"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container mx-auto pt-40 px-4 xl:px-16">
+          <!-- Başlıq və button -->
+          <div
+            class="flex flex-col xl:flex-row xl:justify-between xl:items-end gap-6"
+          >
+            <h1
+              class="txt-color-spc text-5xl xl:text-6xl font-semibold xl:w-3/5 w-full"
+            >
+              "İnsana dəyər" konsept mesajı ilə
+            </h1>
+            <a
+              href="#"
+              class="bg-color-spc text-white px-5 py-2 rounded-md w-fit h-fit mt-10 xl:mt-0"
+            >
+              Təqdimatı yüklə
+            </a>
+          </div>
+
+          <!-- Video -->
+          <div class="mt-16">
+            <video
+              id="video"
+              loop
+              autoplay
+              muted
+              playsinline
+              class="w-full aspect-video object-cover rounded-lg shadow-md"
+            >
+              <source
+                src="https://mirf.az/videos/lWYAqtK1fAPzU46AVCqslD2Du3Q0MIfTRV506SMm.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div
+          class="container mx-auto flex flex-col-reverse xl:flex-row justify-between p-5 xl:p-28 gap-y-7 items-center"
+        >
+          <div class="w-full xl:w-3/5 flex flex-col gap-6">
+            <h3 class="txt-color-spc text-2xl font-bold">
+              Milli İnsan Resursları Forumu haqqında
+            </h3>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Ölkəmizdə insan resurslarının inkişafı istiqamətində bilik və
+              təcrübələrin paylaşılması üçün peşəkar spikerlərin öz
+              təcrübələrini bölüşdüyü Milli İnsan Resursları Forumu 2015-ci
+              ildən etibarən illik olaraq keçirilir.
+            </p>
+            <p class="text-sm text-gray-700 leading-relaxed">
+              Bu il yubileyi keçirilən Milli İnsan Resursları Forumu mövzusu,
+              keçirilmə formatı, tətbiq etdiyi yenilikləri ilə ilklərə imza
+              atmağa davam edəcək. Forumun bir bütöv günü əhatə etməklə 700-dək
+              peşəkar mütəxəssis, 15+ spikerin iştirakı ilə keçirilməsi
+              planlaşdırılır. “İnsana dəyər” şüarı bu ilki Milli İnsan
+              Resursları Forumunun panelləri üzrə əsas müzakirə istiqaməti
+              olacaqdır.
+            </p>
+          </div>
+
+          <div class="w-full xl:w-2/5">
+            <img
+              src="assets/image/1823768968050628.jpg"
+              alt="foto"
+              class="w-full object-cover rounded-lg shadow-md"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto w-full">
+          <h2
+            class="text-3xl xl:text-5xl font-bold my-[20px] txt-color-spc text-center"
+          >
+            Tədbirin Moderator və Spikerləri
+          </h2>
+          <div class="support-area">
+            <h3>Moderatorlar</h3>
+          </div>
+          <div class="flex justify-evenly flex-wrap mt-[20px]">
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1826300508387536.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Kamil Bayramlı
+                </h4>
+                <p class="text-gray-700 font-light">
+                  Azərbaycan Respublikası Mədəniyyət Nazirliyi
+                </p>
+                <p class="text-gray-700 font-light">
+                  İnsan kapitalının idarə edilməsi şöbəsinin müdiri
+                </p>
+              </div>
+            </a>
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1829633774205483.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Cabir Süleymanlı
+                </h4>
+                <p class="text-gray-700 font-light">MİRF</p>
+                <p class="text-gray-700 font-light">Layihə rəhbəri</p>
+              </div>
+            </a>
+          </div>
+          <div class="support-area">
+            <h3>Spikerlər</h3>
+          </div>
+          <div class="flex justify-evenly flex-wrap mt-[20px]">
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1824742476758934.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Şəmsiyyə Mustafayeva
+                </h4>
+                <p class="text-gray-700 font-light">
+                  Dünya Bankının və BMT-nin Əhali Fondu
+                </p>
+                <p class="text-gray-700 font-light">
+                  Gender Bərabərliyi üzrə Baş Məsləhətçi
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1825039530483993.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Tural Məmmədov
+                </h4>
+                <p class="text-gray-700 font-light">SOCAR</p>
+                <p class="text-gray-700 font-light">
+                  İnsan Kapitalının İnkişafı və Funksional Mükəmməllik
+                  Departamentinin rəis müavini
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1825040011038744.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Dəyanət Ağayev
+                </h4>
+                <p class="text-gray-700 font-light">
+                  Paprec Enerji Şirkətinin İnsan Resursları Departamentinin
+                  rəhbəri
+                </p>
+                <p class="text-gray-700 font-light">
+                  Hucap Consulting şirkətinin təsisçisi və direktoru
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1825130514355511.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Seymur Əhmədov
+                </h4>
+                <p class="text-gray-700 font-light">Azerconnect Group</p>
+                <p class="text-gray-700 font-light">
+                  İR İdarəetmə və Layihələr Direktoru
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1825833109680293.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Kamil Hüseynov
+                </h4>
+                <p class="text-gray-700 font-light">KHHR Consultancy</p>
+                <p class="text-gray-700 font-light">
+                  KHHR Consultancy Təsisçi, İdarəetmə üzrə Konsultant və Təlimçi
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1826204619536331.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Sevinc Qarakişiyeva
+                </h4>
+                <p class="text-gray-700 font-light">
+                  Umid-Babek Operating Company
+                </p>
+                <p class="text-gray-700 font-light">
+                  “Umid-Babek Operating Company” şirkətinin Azərbaycan
+                  Filialında İnsan Resursları şöbəsinin rəisi
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1825915451759496.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Fərhad Pərvizi
+                </h4>
+                <p class="text-gray-700 font-light">Baker Tilly Azerbaijan</p>
+                <p class="text-gray-700 font-light">
+                  Baker Tilly Azerbaijan Məsləhət Xidmətləri Direktoru
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1825915787859176.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Tural İslamov
+                </h4>
+                <p class="text-gray-700 font-light">
+                  LANDAU Education Group, Mergen Group Consultancy Company
+                </p>
+                <p class="text-gray-700 font-light">
+                  LANDAU Education Group, HR direktor Mergen Group consultancy
+                  Company, həmtəsisçi
+                </p>
+              </div>
+            </a>
+
+            <a href="#ModalArea_14" class="spikers_a_tag">
+              <div
+                class="moderator-info relative text-center transition-all duration-700 ease-in-out mb-5"
+              >
+                <img
+                  src="https://mirf.az/uploads/spikers/1826209555077040.jpg"
+                  alt="1826300508387536"
+                  class="inline"
+                />
+                <h4 class="mt-4 text-2xl font-bold txt-color-spc">
+                  Əfsanə Rəcəbova
+                </h4>
+                <p class="text-gray-700 font-light">
+                  "Azərbaycan Hava Yolları" (AZAL)
+                </p>
+                <p class="text-gray-700 font-light">
+                  İnsan Resursları üzrə Strateji Biznes Partnyor
+                </p>
+              </div>
+            </a>
+          </div>
+          <h2 class="text-5xl font-bold my-[20px] txt-color-spc text-center">
+            Dəstəyiniz üçün təşəkkür edirik!
+          </h2>
+        </div>
+      </section>
+
+      <section>
+        <div class="container mx-auto w-full">
+          <div class="support-area">
+            <h3>Təşkilatçı</h3>
+          </div>
+
+          <div class="brend-flex my-6 flex flex-wrap justify-around">
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--BAS SPONSOR -->
+      <section>
+        <div class="container mx-auto w-full mb-10">
+          <div class="support-area">
+            <h3>Baş Sponsor</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPONSORLAR -->
+      <section>
+        <div class="container mx-auto w-full mb-10">
+          <div class="support-area">
+            <h3>Sponsorlar</h3>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEREFDASLAR -->
+      <section>
+        <div class="container mx-auto w-full">
+          <div class="support-area">
+            <h3>Tərəfdaşlar</h3>
+          </div>
+
+          <div class="brend-flex my-6 flex flex-wrap justify-around">
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Təşkilati Dəstək -->
+      <section>
+        <div class="container mx-auto w-full">
+          <div class="support-area">
+            <h3>Təşkilati Dəstək</h3>
+          </div>
+          <div class="brend-flex my-6 flex flex-wrap justify-around">
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Media tərəfdaşları -->
+      <section id="program">
+        <div class="container mx-auto w-full">
+          <div class="support-area">
+            <h3>Media tərəfdaşları</h3>
+          </div>
+
+          <div class="brend-flex my-6 flex flex-wrap justify-around">
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+
+            <a
+              class="popup flex items-center h-[142px] mx-12 justify-center"
+              href="#ModalArea12_3"
+            >
+              <div class="sponsor_img">
+                <img
+                  src="https://mirf.az/uploads/support/1828280533008453.png"
+                  alt=""
+                />
+              </div>
+              <div
+                class="overlay-brend absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center opacity-0"
+              >
+                <button>Profile get</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Table section -->
+      <section>
+        <div class="container mx-auto w-full px-4">
+          <h3 class="txt-color-spc text-2xl font-bold">Tədbirin Proqramı</h3>
+          <h2 class="text-5xl leading-loose font-bold txt-color-spc">
+            Panellərlə tanış olun
+          </h2>
+          <a href="#" class="p-3 bg-blue-950 text-white rounded"
+            ><span>31.05.2025</span></a
+          >
+          <div class="panel-container w-full p-5 mt-7">
+            <!-- Panel 1 -->
+
+            <div class="panel">
+              <div
+                class="panel-title cursor-pointer text-black p-6 font-normal rounded-md"
+                onclick="togglePanel('panel1')"
+              >
+                İnsana Yeni Dəyər <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                id="panel1"
+                class="panel-table overflow-hidden max-h-0 bg-white rounded-md"
+              >
+                <table>
+                  <tr>
+                    <th>Panel</th>
+                    <th>Saat</th>
+                    <th>Moderator / Spikerlər</th>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="4" class="text-center">
+                      İnsana Yeni Dəyər <br />
+                      10:00 - 13:00
+                    </td>
+                    <td class="text-center">-</td>
+                    <td class="flex items-center">
+                      <img
+                        src="https://mirf.az/uploads/moderators/1828296106737998.jpg"
+                        alt=""
+                      />Moderator: Kamil Bayramlı
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">-</td>
+                    <td class="flex items-center">
+                      <img
+                        src="https://mirf.az/uploads/moderators/1828296106737998.jpg"
+                        alt=""
+                      />
+                      Spiker: Kamil Hüseynov
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <!-- Panel 2 -->
+            <div class="panel">
+              <div
+                class="panel-title cursor-pointer text-black p-6 font-normal rounded-md"
+                onclick="togglePanel('panel2')"
+              >
+                Təcrübəyə Dəyər <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                id="panel2"
+                class="panel-table overflow-hidden max-h-0 bg-white rounded-md"
+              >
+                <table>
+                  <tr>
+                    <th>Panel</th>
+                    <th>Saat</th>
+                    <th>Moderator / Spikerlər</th>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="4" class="text-center">
+                      Təcrübəyə Dəyər <br />
+                      14:15 - 16:00
+                    </td>
+                    <td class="text-center">-</td>
+                    <td class="flex items-center">
+                      <img
+                        src="https://mirf.az/uploads/moderators/1828296106737998.jpg"
+                        alt=""
+                      />
+                      Moderator: Cabir Süleymanlı
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">-</td>
+                    <td class="flex items-center">
+                      <img
+                        src="https://mirf.az/uploads/moderators/1828296106737998.jpg"
+                        alt=""
+                      />
+                      Spiker: Seymur Əhmədov
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
+            <!-- Panel 3 -->
+            <div class="panel">
+              <div
+                class="panel-title cursor-pointer text-black p-6 font-normal rounded-md"
+                onclick="togglePanel('panel3')"
+              >
+                Fərqli Dəyər <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div
+                id="panel3"
+                class="panel-table overflow-hidden max-h-0 bg-white rounded-md"
+              >
+                <table>
+                  <tr>
+                    <th>Panel</th>
+                    <th>Saat</th>
+                    <th>Moderator / Spikerlər</th>
+                  </tr>
+
+                  <tr>
+                    <td rowspan="4" class="text-center">
+                      Fərqli Dəyər <br />
+                      14:15 - 16:00
+                    </td>
+                    <td class="text-center">-</td>
+                    <td class="flex items-center">
+                      <img
+                        src="https://mirf.az/uploads/moderators/1828296106737998.jpg"
+                        alt=""
+                      />
+                      Moderator: Cabir Süleymanlı
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td class="text-center">-</td>
+                    <td class="flex items-center">
+                      <img
+                        src="https://mirf.az/uploads/moderators/1828296106737998.jpg"
+                        alt=""
+                      />
+                      Spiker: Seymur Əhmədov
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Video -->
+      <section>
+        <div class="container mx-auto w-full px-4">
+          <div class="mt-10">
+            <h2 class="text-5xl font-bold txt-color-spc">
+              MİRF2024 İcmal Video
+            </h2>
+            <div class="mt-10">
+              <video
+                id="video"
+                class="w-full"
+                loop=""
+                playsinline=""
+                muted=""
+                controls="controls"
+              >
+                <source
+                  src="https://mirf.az/videos/Facemarkedit.mp4"
+                  type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'
+                />
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <div class="container mx-auto w-full px-4">
+          <div class="contact-section my-10">
+            <h2 class="text-5xl font-bold txt-color-spc">Əlaqə</h2>
+            <div class="contact-container w-full flex gap-10 mt-5">
+              <div class="contact-left w-[69%]">
+                <img
+                  src="assets/image/contactphto.webp"
+                  alt=""
+                  class="h-[450px] w-full"
+                />
+              </div>
+              <div class="contact-right w-[30%] flex flex-col justify-between">
+                <div class="flex flex-col text-center gap-2">
+                  <p>Bilet satışı və partnyorluq üzrə əlaqə</p>
+                  <a href="#"
+                    ><i class="fa-solid fa-phone"></i>+994 51 233 47 73</a
+                  >
+                  <a href="#"
+                    ><i class="fa-solid fa-phone"></i>+994 51 233 47 73</a
+                  >
+                </div>
+
+                <div class="flex gap-2 justify-center text-xl">
+                  <a href="https://www.facebook.com/mirfaze" target="_blank"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/company/mi%CC%87rf/?viewAsMember=true"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/playlist?list=PLNAQ8xBu6-NMFbtoBdobr72WepjwIk3bf"
+                    target="_blank"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                  <a href="https://www.instagram.com/mirf.aze/" target="_blank"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </div>
+
+                <div class="text-center">
+                  <a
+                    href="https://goo.gl/maps/nj8QFUhuavMhuEdeA"
+                    target="_blank"
+                  >
+                    <i class="fa-solid fa-location-dot"></i> Xaqani Rüstəmov,
+                    Bakı, Xətai, AZ1025
+                  </a>
+                </div>
+
+                <div class="flex flex-col justify-center items-center">
+                  <i class="fa-solid fa-envelope"></i>
+                  <a href="mailto:info@mirf.az">info@mirf.az</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Bilet qiymətləri-->
+      <section class="bg-[#f2f2f6] p-8" id="ticket-buy">
+        <div class="container mx-auto w-full">
+          <div class="support-area">
+            <h3>Bilet qiymətləri</h3>
+          </div>
+          <div class="ticket-cards mt-5 flex flex-wrap justify-evenly w-full">
+            <div class="ticket-card">
+              <div
+                class="card-left relative flex flex-col justify-between text-white p-5"
+              >
+                <div class="ccc absolute w-5 h-5 bg-white top-0 right-0"></div>
+                <div class="ticket-info">
+                  <div>
+                    <div><img src="assets/image/indir.png" alt="logo" /></div>
+                    <div class="info-icon relative inline-block">
+                      <i class="fa-solid fa-info"></i>
+                      <div class="tooltip-text">
+                        Biletiniz sizə 3 paneldə iştirak imkanı, 2 dadlı coffee
+                        break və 1 rahat nahar fasiləsi təqdim edir!
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Tarix:</p>
+                    <span>31.05.2025</span>
+                    <p>Saat</p>
+                    <span>09:00 - 18:00</span>
+                  </div>
+                </div>
+
+                <div class="ticket-type">
+                  <p>Naharsız bilet</p>
+                </div>
+              </div>
+
+              <div
+                class="card-right bg-white px-3 py-5 relative flex flex-col justify-around text-center"
+              >
+                <div class="vvv absolute w-5 h-5 bottom-0 left-0"></div>
+
+                <div class="price-ticket">170 Azn</div>
+
+                <div class="check">
+                  <button class="SebeteElaveEt">Səbətə əlavə et</button>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-card">
+              <div
+                class="card-left relative flex flex-col justify-between text-white p-5"
+              >
+                <div class="ccc absolute w-5 h-5 bg-white top-0 right-0"></div>
+                <div class="ticket-info">
+                  <div>
+                    <div><img src="assets/image/indir.png" alt="logo" /></div>
+                    <div class="info-icon relative inline-block">
+                      <i class="fa-solid fa-info"></i>
+                      <div class="tooltip-text">
+                        Biletiniz sizə 3 paneldə iştirak imkanı, 2 dadlı coffee
+                        break fasiləsi təqdim edir!
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Tarix:</p>
+                    <span>31.05.2025</span>
+                    <p>Saat</p>
+                    <span>09:00 - 18:00</span>
+                  </div>
+                </div>
+
+                <div class="ticket-type">
+                  <p>Naharsız bilet</p>
+                </div>
+              </div>
+
+              <div
+                class="card-right bg-white px-3 py-5 relative flex flex-col justify-around text-center"
+              >
+                <div class="vvv absolute w-5 h-5 bottom-0 left-0"></div>
+
+                <div class="price-ticket">120 Azn</div>
+
+                <div class="check">
+                  <button class="SebeteElaveEt">Səbətə əlavə et</button>
+                </div>
+              </div>
+            </div>
+            <div class="ticket-card">
+              <div
+                class="card-left relative flex flex-col justify-between text-white p-5"
+              >
+                <div class="ccc absolute w-5 h-5 bg-white top-0 right-0"></div>
+                <div class="ticket-info">
+                  <div>
+                    <div><img src="assets/image/indir.png" alt="logo" /></div>
+                    <div class="info-icon relative inline-block">
+                      <i class="fa-solid fa-info"></i>
+                      <div class="tooltip-text">
+                        Link vasitəsilə tədbiri izləmək
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p>Tarix:</p>
+                    <span>31.05.2025</span>
+                    <p>Saat</p>
+                    <span>09:00 - 18:00</span>
+                  </div>
+                </div>
+
+                <div class="ticket-type">
+                  <p>Naharsız bilet</p>
+                </div>
+              </div>
+
+              <div
+                class="card-right bg-white px-3 py-5 relative flex flex-col justify-around text-center"
+              >
+                <div class="vvv absolute w-5 h-5 bottom-0 left-0"></div>
+
+                <div class="price-ticket">50 Azn</div>
+
+                <div class="check">
+                  <button class="SebeteElaveEt">Səbətə əlavə et</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button id="sebetiSifirla">Səbəti sıfırla</button>
+
+      <section>
+        <div class="container mx-auto w-full my-10 px-4">
+          <div>
+            <h2 class="text-5xl font-bold txt-color-spc">
+              Xəbərlər üçün izləmədə qalın
+            </h2>
+          </div>
+          <div class="flex justify-end">
+            <a
+              href="#"
+              class="bg-color-spc text-white px-5 py-2 rounded-md w-fit h-fit mt-10 xl:mt-0"
+            >
+              Davamına Bax
+            </a>
+          </div>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer>
+      <div class="footer-top w-full pt-14">
+        <img
+          class="m-auto h-80 object-cover"
+          src="assets/image/footertop.jpeg"
+          alt=""
+        />
+      </div>
+      <div class="footer-bottom bg-black pt-12 text-center">
+        <div class="container mx-auto w-full bg-black">
+          <div class="footer-logo">
+            <img src="assets/image/footer-logo.png" alt="logo" />
+          </div>
+
+          <div
+            class="footer-link text-white text-2xl flex items-center justify-center gap-4 pt-12 font-extralight"
+          >
+            <a href="https://www.facebook.com/mirfaze" target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/mi%CC%87rf/?viewAsMember=true"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/playlist?list=PLNAQ8xBu6-NMFbtoBdobr72WepjwIk3bf"
+              target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://www.instagram.com/mirf.aze/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+
+          <div class="footer-menu">
+            <ul
+              class="flex flex-col justify-center rounded-sm xl:flex-row xl:rounded-full text-white text-xl gap-3 w-full bg-zinc-800 p-5 mt-5"
+            >
+              <li><a href="#">Haqqında</a></li>
+              <li><a href="#">Program</a></li>
+              <li><a href="#">Bloqlar</a></li>
+              <li><a href="#">Layihələr</a></li>
+              <li><a href="#">Əlaqə</a></li>
+              <li><a href="#">Private Privacy</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="footer-copy flex justify-center rounded-none xl:rounded-full text-black w-full xl:w-[95%] m-auto bg-white p-2 xl:p-5 mt-5"
+          >
+            <h4 class="uppercase">
+              Veb sayta texniki dəstək
+              <a
+                href="https://markup.az"
+                target="_blank"
+                alt="Marka"
+                class="inline-block border-b-4 border-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-blue-600 bg-[length:100%_4px] bg-no-repeat bg-bottom pb-1"
+                >Markup Agency</a
+              >
+            </h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

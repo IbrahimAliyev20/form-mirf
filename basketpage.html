@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>FORM</title>
+  </head>
+  <body>
+    <header class="bg-white border-b-2 shadow-lg fixed w-full z-50">
+      <div class="container m-auto flex items-center justify-between py-4 px-2">
+        <!-- LOGO -->
+        <div class="logo w-44">
+          <a href="/">
+            <img src="./assets/image/logo.png" alt="logo" />
+          </a>
+        </div>
+        <div class="navmenu hidden xl:flex text-cyan-950">
+          <ul class="flex space-x-7 font-bold">
+            <li><a href="/">Ana Səhifə</a></li>
+            <li><a href="#about">Haqqında</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#">Bloqlar</a></li>
+            <li><a href="#">Layihələr</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+
+            <!-- Qalereya menyusu -->
+            <li class="relative group">
+              <a href="#" class="flex items-center">
+                Qalereya <i class="fa-solid fa-angle-down ml-1"></i>
+              </a>
+
+              <!-- Qalereya alt menyusu -->
+              <ul
+                class="absolute hidden group-hover:block bg-white shadow-md py-2 w-48 z-10"
+              >
+                <!-- Köhnə Formlar -->
+                <li class="relative hover-trigger">
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                  >
+                    Köhnə Formlar <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+
+                  <ul
+                    class="absolute top-0 left-full hidden bg-white shadow-md py-2 w-40 z-20 hover-target"
+                  >
+                    <li>
+                      <a
+                        href="https://2022.mirf.az/"
+                        target="_blank"
+                        class="block px-4 py-2 hover:bg-gray-200"
+                        >MİRF 2022</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://2023.mirf.az/"
+                        target="_blank"
+                        class="block px-4 py-2 hover:bg-gray-200"
+                        >MİRF 2023</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        href="https://2024.mirf.az/"
+                        target="_blank"
+                        class="block px-4 py-2 hover:bg-gray-200"
+                        >MİRF 2024</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- Foto -->
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                  >
+                    <span>Foto</span> <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+
+                <!-- Video -->
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                  >
+                    <span>Video</span> <i class="fa-solid fa-chevron-right"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- TICKET LANGUAGE BASKET -->
+        <div
+          class="header-icn hidden xl:flex items-center justify-center space-x-4"
+        >
+          <div class="drop-language relative group text-cyan-950 font-bold">
+            <div>
+              Az <i class="fa-solid fa-angle-down ml-1"></i>
+              <ul
+                class="absolute hidden group-hover:block bg-white shadow-md py-2 w-24"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><img
+                      src="assets/image/Azerbaijan-Flag-icon.png"
+                      alt="flag"
+                      class="w-6 me-2"
+                    />
+                    AZ</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><img
+                      src="assets/image/United-Kingdom-Flag-icon.png"
+                      alt="flag"
+                      class="w-6 me-2"
+                    />EN</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="basket=btn">
+            <a href="/basketpage.html">
+              <i
+                class="fa-solid fa-cart-shopping relative text-lg text-cyan-950 hover:text-blue-600 cursor-pointer"
+              >
+                <p
+                  class="basketCount count absolute bg-red-400 text-white p-1 bottom-3 left-3 text-9px rounded-full"
+                >
+                  0
+                </p>
+              </i>
+            </a>
+          </div>
+
+          <div class="ticket-btn bg-color-spc rounded-lg hover:bg-blue-600">
+            <a href="#ticket-buy">
+              <span class="text-slate-50 px-2 font-semibold cursor-pointer"
+                >Bilet Al<i class="fa-solid fa-ticket ml-1 py-3"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BURGERMENU -->
+        <div
+          class="burger-menu w-8 cursor-pointer flex-col justify-between h-5 m-2"
+          id="burgerMenu"
+        >
+          <div class="burger-bar"></div>
+          <div class="burger-bar"></div>
+          <div class="burger-bar"></div>
+        </div>
+
+        <!-- MOBILE-NAV -->
+        <div
+          class="mobile-nav shadow-lg fixed top-0 -right-96 w-1/2 max-w-80 h-screen bg-white flex flex-col p-5 pt-14 z-50"
+          id="mobileNav"
+        >
+          <button
+            class="close-btn absolute top-3 left-3 border-none text-black cursor-pointer"
+            id="closeBtnNav"
+          >
+            &times;
+          </button>
+
+          <ul class="flex flex-col space-x-0 font-bold">
+            <li><a href="/">Ana Səhifə</a></li>
+            <li><a href="#about">Haqqında</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#">Bloqlar</a></li>
+            <li><a href="#">Layihələr</a></li>
+            <li><a href="#contact">Əlaqə</a></li>
+            <li class="relative group">
+              <a href="#" class="flex items-center">
+                Qaleriya <i class="fa-solid fa-angle-down"></i>
+              </a>
+              <ul
+                class="absolute hidden group-hover:block bg-white shadow-md py-2 w-48"
+              >
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    >Köhnə Formlar <i class="fa-solid fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><span>Foto</span> <i class="fa-solid fa-chevron-right"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                    ><span>Video</span> <i class="fa-solid fa-chevron-right"></i
+                  ></a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="drop-language relative group text-cyan-950 font-bold">
+            <div class="flex items-center cursor-pointer">
+              <span>Az</span>
+              <i class="fa-solid fa-angle-down ml-1"></i>
+            </div>
+            <ul
+              class="absolute hidden group-hover:block bg-white shadow-md py-2 w-24"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                >
+                  <img
+                    src="assets/image/Azerbaijan-Flag-icon.png"
+                    alt="flag"
+                    class="w-6"
+                  />
+                  AZ
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="flex items-center justify-between px-4 py-2 hover:bg-gray-200"
+                >
+                  <img
+                    src="assets/image/United-Kingdom-Flag-icon.png"
+                    alt="flag"
+                    class="w-6"
+                  />
+                  EN
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="basket=btn">
+            <i
+              class="fa-solid fa-cart-shopping relative text-lg text-cyan-950 hover:text-blue-600 cursor-pointer"
+            >
+              <p
+                class="basketCount count absolute bg-red-400 text-white p-1 bottom-3 left-3 text-9px rounded-full"
+              >
+                0
+              </p>
+            </i>
+          </div>
+
+          <div
+            class="ticket-btn bg-color-spc rounded-lg hover:bg-blue-600 text-center"
+          >
+            <a href="#">
+              <span class="text-slate-50 px-2 font-semibold cursor-pointer"
+                >Bilet Al<i class="fa-solid fa-ticket ml-1 py-3"></i
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="container mx-auto w-full pt-32 px-4">
+          <h2 class="text-5xl leading-loose font-bold txt-color-spc">Səbət</h2>
+
+          <div
+            class="basket-section w-full flex flex-col xl:flex-row mt-10 bg-slate-100 py-10 px-5"
+          >
+            <div class="ticket-summary flex flex-col gap-8">
+              <div class="card-summary w-full flex">
+                <div class="summary-img">
+                  <img src="assets/image/footer-logo.png" alt="Logo" />
+                </div>
+                <div
+                  class="summary-text flex flex-col justify-evenly bg-white pl-5"
+                >
+                  <div><span class="font-bold">Naharsız bilet</span></div>
+                  <div><span class="font-extrabold">120 AZN</span></div>
+                  <div><span>09:00-18:00</span>/<span>31.05.2025</span></div>
+                </div>
+              </div>
+
+              <div class="flex justify-start xl:justify-end">
+                <div
+                  class="count-summary flex items-center gap-1 p-1 rounded-xl w-fit bg-white"
+                >
+                  <button>-</button>
+                  <p>1</p>
+                  <button>+</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="line-basket h-max mx-10"></div>
+
+            <div class="ticket-form">
+              <div class="card-summary w-full hidden xl:flex">
+                <div class="summary-img">
+                  <img src="assets/image/footer-logo.png" alt="Logo" />
+                </div>
+                <div
+                  class="summary-text flex flex-col justify-evenly bg-white pl-5"
+                >
+                  <div><span class="font-bold">Naharsız bilet</span></div>
+                  <div><span class="font-extrabold">120 AZN</span></div>
+                  <div><span>09:00-18:00</span>/<span>31.05.2025</span></div>
+                </div>
+              </div>
+
+              <div class="ticket-count flex flex-wrap gap-1 py-10 w-[450px]">
+                <div class="ticket-tab tickets-tab-selected">Bilet 1</div>
+              </div>
+
+              <div class="form-container">
+                <h2 class="text-2xl leading-loose font-bold txt-color-spc">
+                  Qeydiyyat Formu
+                </h2>
+
+                <form>
+                  <div
+                    class="form-inputs flex flex-col items-center gap-8 mt-8"
+                  >
+                    <input type="text" placeholder="Ad" />
+                    <input type="text" placeholder="Soyad" />
+                    <input type="email" placeholder="E-poçt ünvanı" />
+                    <div class="inpt-phone flex items-center w-full bg-white">
+                      <span class="ml-3">+994</span>
+                      <input type="text" placeholder="(__) ___-__-__" />
+                    </div>
+                    <input type="text" placeholder="İş yeri" />
+                    <input type="text" placeholder="Vəzifə" />
+                  </div>
+                  <div class="btn-form">
+                    <i class="fa-solid fa-table-list"></i>
+                    <button>Formu Tamamla</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-bottom bg-black pt-12 text-center">
+        <div class="container mx-auto w-full bg-black">
+          <div class="footer-logo">
+            <img src="assets/image/footer-logo.png" alt="logo" />
+          </div>
+
+          <div
+            class="footer-link text-white text-2xl flex items-center justify-center gap-4 pt-12 font-extralight"
+          >
+            <a href="https://www.facebook.com/mirfaze" target="_blank"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/mi%CC%87rf/?viewAsMember=true"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/playlist?list=PLNAQ8xBu6-NMFbtoBdobr72WepjwIk3bf"
+              target="_blank"
+              ><i class="fa-brands fa-youtube"></i
+            ></a>
+            <a href="https://www.instagram.com/mirf.aze/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+
+          <div class="footer-menu">
+            <ul
+              class="flex flex-col justify-center rounded-sm xl:flex-row xl:rounded-full text-white text-xl gap-3 w-full bg-zinc-800 p-5 mt-5"
+            >
+              <li><a href="#">Haqqında</a></li>
+              <li><a href="#">Program</a></li>
+              <li><a href="#">Bloqlar</a></li>
+              <li><a href="#">Layihələr</a></li>
+              <li><a href="#">Əlaqə</a></li>
+              <li><a href="#">Private Privacy</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="footer-copy flex justify-center rounded-none xl:rounded-full text-black w-full xl:w-[95%] m-auto bg-white p-2 xl:p-5 mt-5"
+          >
+            <h4 class="uppercase">
+              Veb sayta texniki dəstək
+              <a
+                href="https://markup.az"
+                target="_blank"
+                alt="Marka"
+                class="inline-block border-b-4 border-transparent bg-gradient-to-r from-orange-400 via-pink-500 to-blue-600 bg-[length:100%_4px] bg-no-repeat bg-bottom pb-1"
+                >Markup Agency</a
+              >
+            </h4>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

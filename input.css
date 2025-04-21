@@ -1,0 +1,454 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  min-height: 100vh;
+}
+.body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+.bg-color-spc {
+  background-color: #3b3d57;
+}
+.txt-color-spc {
+  color: #3b3d57;
+}
+
+.text-9px {
+  font-size: 9px;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.navmenu ul li {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.navmenu ul li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #2563eb;
+  transition: all 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navmenu ul li:hover::after {
+  width: 100%;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.burger-bar {
+  height: 3px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.mobile-nav {
+  transition: 0.5s;
+}
+
+.mobile-nav.active {
+  transform: translateX(0px);
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav ul li {
+  margin: 5px 0;
+}
+
+.mobile-nav ul li a {
+  color: #000000;
+  font-weight: 500;
+  font-family: "Lexend", sans-serif;
+}
+.hover-trigger:hover .hover-target {
+  display: block;
+}
+.hover-target {
+  display: none;
+}
+
+.close-btn {
+  background: none;
+  font-size: 1.87rem;
+}
+.support-area h3 {
+  font-weight: 700;
+  color: white;
+  background-color: #241f5f;
+  text-align: center;
+  padding: 20px;
+  font-size: 1.75rem;
+}
+.moderator-info img {
+  box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 0.56);
+  border-radius: 5px;
+  width: 254px;
+  z-index: 1;
+}
+.spikers_a_tag {
+  width: 30%;
+}
+.brend-flex img {
+  max-width: 150px;
+  max-height: 150px;
+  object-fit: contain;
+}
+.popup {
+  position: relative;
+  width: 15%;
+}
+.popup:hover .overlay-brend {
+  opacity: 1;
+}
+.overlay-brend {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: 0.1s ease;
+}
+.overlay-brend button {
+  padding: 10px 20px;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.panel-container {
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+
+.panel-title {
+  background-color: #f7f7f7;
+  transition: background-color 0.3s ease;
+}
+
+.panel-table {
+  transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.panel-table.open {
+  max-height: 1000px;
+  padding: 10px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+tr img {
+  width: 60px;
+  height: 60px;
+}
+.footer-top img {
+  width: 95%;
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.1);
+}
+.footer-logo img {
+  width: 250px;
+  height: 120px;
+  object-fit: contain;
+  transform: scale(2);
+  margin: auto;
+}
+
+table tr td img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+
+.footer-menu ul li a:hover {
+  display: inline-block;
+  transform: scale(1.1);
+  border-bottom: 2px solid rgb(255, 255, 255, 0.7);
+}
+
+.footer-link a:hover {
+  display: inline-block;
+  transform: scale(1.1);
+}
+
+#video {
+  display: block;
+  position: relative;
+  height: 400px;
+  width: 100%;
+  border: 1px solid #3b3d57;
+  border-radius: 5px;
+  aspect-ratio: 1 / 0.3;
+  object-fit: cover;
+  margin: auto;
+}
+.contact-right div {
+  box-shadow: 0 0 5px rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.ticket-card {
+  width: 28%;
+  display: flex;
+}
+.card-left {
+  width: 70%;
+  background-color: #241f5f;
+  font-family: "Montserrat";
+}
+.ccc {
+  border-radius: 0 0 0 20px;
+}
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+}
+.ticket-info p {
+  font-weight: 600;
+}
+.ticket-info img {
+  width: 110px;
+  filter: brightness(0) invert(1);
+  margin-bottom: 10px;
+}
+
+.card-left i {
+  background-color: white;
+  color: #241f5f;
+  border-radius: 100%;
+  padding: 3px 9px;
+  font-size: 16px;
+}
+.card-right {
+  width: 29%;
+  height: 250px;
+  font-family: "Montserrat";
+}
+.vvv {
+  background-color: #241f5f;
+  border-radius: 0 20px 0 0;
+}
+.ticket-type p {
+  font-weight: 600;
+}
+
+.check button {
+  padding: 7px 0;
+  background-color: #3b3d57;
+  align-items: end;
+  font-family: "Poppins";
+  width: 100%;
+  border-radius: 7px;
+  margin: 0 auto;
+  border: none;
+  color: white;
+}
+.check button:hover {
+  background-color: #2f3146;
+}
+.price-ticket {
+  color: #241f5f;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 200px;
+  background-color: white;
+  color: #241f5f;
+  text-align: left;
+  padding: 10px;
+  border-radius: 6px;
+  position: absolute;
+  top: -10px;
+  left: 120%;
+  font-weight: 600;
+  z-index: 1;
+  font-size: 13px;
+  font-family: "Poppins";
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.info-icon:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.ticket-summary {
+  width: 49%;
+}
+
+.ticket-form {
+  width: 49%;
+}
+
+.summary-img {
+  width: 20%;
+  padding: 27px 0;
+  background-color: #241f5f;
+  border-radius: 100% 0 0 0;
+}
+.summary-img img {
+  width: 100%;
+  object-fit: contain;
+  transform: rotate(-90deg);
+}
+
+.summary-text {
+  width: 80%;
+  color: #3f3797;
+}
+.count-summary {
+  box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+}
+.count-summary button {
+  padding: 5px;
+}
+.count-summary button:first-child {
+  border-radius: 10px 0 0 10px;
+}
+.count-summary button:last-child {
+  border-radius: 0 10px 10px 0;
+}
+.count-summary p {
+  padding: 5px;
+  background-color: white;
+}
+
+.ticket-tab {
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  color: #800707;
+  font-size: 14px;
+  padding: 18px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #800707;
+}
+.tickets-tab-selected {
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  color: white !important;
+  font-size: 14px;
+  padding: 18px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #800707;
+}
+.form-inputs input {
+  width: 100%;
+  outline: none;
+  padding: 12px 10px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+.line-basket {
+  width: 1px;
+  background-color: rgb(0, 0, 0, 0.2);
+}
+.btn-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  background-color: #3b3d57;
+  width: fit-content;
+  border-radius: 10px;
+  color: white;
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .burger-menu {
+    display: flex;
+  }
+  .spikers_a_tag {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .contact-container {
+    flex-direction: column;
+  }
+  .contact-left {
+    width: 100%;
+  }
+  .contact-right {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10pxpx;
+  }
+  .contact-right div {
+    width: 49%;
+    justify-content: center;
+    align-items: center;
+  }
+  .ticket-card {
+    width: 100%;
+  }
+  .ticket-cards {
+    gap: 20px;
+  }
+  .ticket-summary {
+    width: 100%;
+  }
+  .ticket-form {
+    width: 100%;
+  }
+  .line-basket {
+    width: 100%;
+    height: 1px;
+    margin: 15px 0;
+  }
+  .ticket-count {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .panel-title {
+    font-size: 16px;
+    padding: 12px;
+  }
+  th,
+  td {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .footer-logo img {
+    width: 150px;
+  }
+  .contact-right div {
+    width: 100%;
+  }
+}
